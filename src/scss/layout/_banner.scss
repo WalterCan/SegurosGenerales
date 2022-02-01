@@ -1,0 +1,62 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+// Banner
+
+.banner {
+	width: 100%;
+	height: 40rem;
+	display: block;
+	margin: auto;
+	background-size: 100% 100%;
+	animation: banner 15s infinite;
+	animation-direction: alternate-reverse;
+}
+@keyframes banner {
+	0%,
+	30% {
+		background-image: url("/img/El-Norte-Banner.jpg");
+	}
+
+	35%,
+	65% {
+		background-image: url("/img/integrity-banner.png");
+	}
+
+	70%,
+	100% {
+		background-image: url("/img/Libra-banner.jpg");
+	}
+}
+//
+.imagen {
+	position: relative;
+	.overlay {
+		position: absolute;
+		background: rgb(255, 255, 255);
+		background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.03995101458552175) 0%,
+			rgba(84, 84, 72, 0.6) 4%
+		);
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+.contenido-imagen {
+	h2 {
+		color: v.$blanco;
+		font-size: 4rem;
+		margin: 0;
+	}
+	p {
+		background-color: v.$amarillo;
+		display: inline-block;
+		padding: 1rem 2rem;
+		color: v.$blanco;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+}
