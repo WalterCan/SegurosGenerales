@@ -1,4 +1,2 @@
-$color: #eeeeee;
-body {
-	background-color: $color;
-}
+@use "base";
+@use "layout";
