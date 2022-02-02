@@ -537,15 +537,16 @@ img {
 }
 
 .lineUp {
-  background-color: #222831;
+  background-color: #eeeeee;
   padding: 5rem 0;
 }
 .lineUp h3,
 .lineUp p {
   text-align: center;
+  font-weight: 700;
 }
 .lineUp .titulo-servicios {
-  color: #ffffff;
+  color: #222831;
 }
 
 @media (min-width: 768px) {
@@ -574,25 +575,31 @@ img {
 }
 
 .bg-gris {
-  background-color: #eeeeee;
+  background-color: #393e46;
+  margin: 2rem;
 }
 
 .bg-amarillo {
   background-color: #ffd369;
+  margin: 2rem;
+}
+.bg-amarillo .descripcion-servicio,
+.bg-amarillo .nombre-servicio {
+  color: #222831;
 }
 
 .icono-moto .nombre-servicio::after {
-  background-image: url("../../../build/img/outline_two_wheeler_black_48dp.png");
+  background-image: url("../../../build/img/incono-moto.png");
 }
 
 .icono-auto .nombre-servicio::after {
-  background-image: url("../../../build/img/outline_directions_car_filled_white_48dp.png");
+  background-image: url("../../../build/img/icono-auto.png");
 }
 
 .icono-bici .nombre-servicio::after {
-  background-image: url("../../../build/img/outline_pedal_bike_white_48dp.png");
+  background-image: url("../../../build/img/icono-bici.png");
 }
 
 .icono-casa .nombre-servicio::after {
-  background-image: url("../../../build/img/outline_cottage_black_48dp.png");
+  background-image: url("../../../build/img/icono-casa.png");
 }
