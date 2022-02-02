@@ -543,6 +543,8 @@ img {
 .lineUp h3,
 .lineUp p {
   text-align: center;
+}
+.lineUp .titulo-servicios {
   color: #ffffff;
 }
 
