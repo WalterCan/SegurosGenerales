@@ -55,14 +55,23 @@ function imagenes(done) {
 	done();
 }
 
+// Funcion para procesar el JS
+
+function javascript(done) {
+	src("../SegurosGenerales/src/js/**/*.js") //Identificamos
+		.pipe(dest("build/js")); //Guardamos
+	done();
+}
 // Creamos el Watch para escuchar cambios
 
 function dev(done) {
 	watch("../SegurosGenerales/src/scss/**/*.scss", css); //dos parametros, Identificamos el archivo y que tarea vamos a mandar a llamar
+	watch("../SegurosGenerales/src/js/**/*.js", javascript); //dos parametros, Identificamos el archivo y que tarea vamos a mandar a llamar
 	done();
 }
 exports.css = css;
+exports.javascript = javascript;
 exports.versionAvif = versionAvif;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev);
