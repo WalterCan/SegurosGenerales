@@ -17,17 +17,17 @@
 @keyframes banner {
 	0%,
 	30% {
-		background-image: url("/img/couple-riding-motorbike-wearing-helmets.jpg");
+		background-image: url("/build/img/couple-riding-motorbike-wearing-helmets.webp");
 	}
 
 	35%,
 	65% {
-		background-image: url("/img/man-driving-car-from-rear-view.jpg");
+		background-image: url("/build/img/car-engine.webp");
 	}
 
 	70%,
 	100% {
-		background-image: url("/img/car-engine.jpg");
+		background-image: url("/build/img/man-driving-car-from-rear-view.webp");
 	}
 }
 //
@@ -41,7 +41,7 @@
 		background: linear-gradient(
 			0deg,
 			rgba(255, 255, 255, 0.03995101458552175) 0%,
-			rgba(84, 84, 72, 0.3) 4%
+			rgba(48, 48, 43, 0.5) 4%
 		);
 		height: 100%;
 		width: 100%;

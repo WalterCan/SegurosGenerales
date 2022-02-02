@@ -1,0 +1,57 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.lineUp {
+	background-color: v.$negro;
+	padding: 5rem 0;
+	h3,
+	p {
+		text-align: center;
+		color: v.$blanco;
+	}
+}
+.servicios-contenedor {
+	@include m.tablet {
+		@include m.grid(2, 5rem);
+	}
+	p {
+		color: v.$blanco;
+	}
+}
+.servicios {
+	padding-top: 2rem;
+	p {
+		&::after {
+			content: "";
+			display: block;
+			width: 20rem;
+			height: 10rem;
+			background-size: 10rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			margin: 2rem auto 0 auto;
+		}
+	}
+}
+
+.bg-gris {
+	background-color: v.$grisClaro;
+}
+.bg-amarillo {
+	background-color: v.$amarillo;
+}
+
+.icono-moto .nombre-servicio::after {
+	background-image: url("../../../build/img/outline_two_wheeler_black_48dp.png");
+}
+.icono-auto .nombre-servicio::after {
+	background-image: url("../../../build/img/outline_directions_car_filled_white_48dp.png");
+}
+
+.icono-bici .nombre-servicio::after {
+	background-image: url("../../../build/img/outline_pedal_bike_white_48dp.png");
+}
+
+.icono-casa .nombre-servicio::after {
+	background-image: url("../../../build/img/outline_cottage_black_48dp.png");
+}
