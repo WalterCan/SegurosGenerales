@@ -3,40 +3,45 @@
 // Banner
 
 .banner {
-	width: 100%;
-	height: 40rem;
+	width: auto;
+	height: 70rem;
 	display: block;
 	margin: auto;
 	background-size: 100% 100%;
-	animation: banner 15s infinite;
+	animation: banner 20s infinite;
 	animation-direction: alternate-reverse;
+	@include m.desktop {
+		width: 100%;
+	}
 }
 @keyframes banner {
 	0%,
 	30% {
-		background-image: url("/img/El-Norte-Banner.jpg");
+		background-image: url("/img/couple-riding-motorbike-wearing-helmets.jpg");
 	}
 
 	35%,
 	65% {
-		background-image: url("/img/integrity-banner.png");
+		background-image: url("/img/man-driving-car-from-rear-view.jpg");
 	}
 
 	70%,
 	100% {
-		background-image: url("/img/Libra-banner.jpg");
+		background-image: url("/img/car-engine.jpg");
 	}
 }
 //
 .imagen {
 	position: relative;
+	max-height: 70rem;
+	min-height: 50rem;
 	.overlay {
 		position: absolute;
 		background: rgb(255, 255, 255);
 		background: linear-gradient(
 			0deg,
 			rgba(255, 255, 255, 0.03995101458552175) 0%,
-			rgba(84, 84, 72, 0.6) 4%
+			rgba(84, 84, 72, 0.3) 4%
 		);
 		height: 100%;
 		width: 100%;
@@ -46,9 +51,10 @@
 	}
 }
 .contenido-imagen {
+	z-index: 10;
 	h2 {
 		color: v.$blanco;
-		font-size: 4rem;
+		font-size: 7rem;
 		margin: 0;
 	}
 	p {
@@ -58,5 +64,6 @@
 		color: v.$blanco;
 		font-weight: 700;
 		font-size: 2rem;
+		margin: 0;
 	}
 }
