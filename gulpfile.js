@@ -16,7 +16,9 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const avif = require("gulp-avif");
 
-//
+//JavaScript minificacion
+
+const terser = require("gulp-terser-js");
 
 function css(done) {
 	src("../SegurosGenerales/src/scss/**/*.scss") //Ubicamos el Archivo
@@ -58,6 +60,7 @@ function imagenes(done) {
 	};
 	src("../SegurosGenerales/src/img/**/*.{png,jpg}") //Identifico
 		.pipe(cache(imagemin(opciones)))
+
 		.pipe(dest("build/img"));
 	done();
 }
@@ -66,6 +69,9 @@ function imagenes(done) {
 
 function javascript(done) {
 	src("../SegurosGenerales/src/js/**/*.js") //Identificamos
+		.pipe(sourcemaps.init())
+		.pipe(terser())
+		.pipe(sourcemaps.write("."))
 		.pipe(dest("build/js")); //Guardamos
 	done();
 }
