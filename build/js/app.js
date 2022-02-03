@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function iniciarApp() {
+	navegacionfija();
 	crearGaleria();
 	scrollNav();
 }
@@ -80,4 +81,28 @@ function mostrarImagen(id) {
 	// Quitamos el scroll cuando seleccionamos una imagen
 
 	body.classList.add("fijar-body");
+}
+
+// Funcion para navegacion fija
+
+function navegacionfija() {
+	const barra = document.querySelector(".header");
+	const sobreSeguros = document.querySelector(".sobre-seguros");
+
+	// vamos a agregar espacio de donde sacamos la barra de header, para que no pegue el salto de linea
+
+	const body = document.querySelector("body");
+
+	// Escuchamos por el scrool que va a suceder en la pantalla
+
+	window.addEventListener("scroll", function () {
+		console.log(sobreSeguros.getBoundingClientRect());
+		if (sobreSeguros.getBoundingClientRect().bottom < 0) {
+			barra.classList.add("fijo");
+			body.classList.add("body-scroll");
+		} else {
+			barra.classList.remove("fijo");
+			body.classList.remove("body-scroll");
+		}
+	});
 }
