@@ -11,6 +11,9 @@ html {
 body {
 	font-family: v.$fuente_principal;
 	font-size: 1.6rem;
+	&.fijar-body {
+		overflow: hidden;
+	}
 }
 body ::selection {
 	background-color: v.$negro;
