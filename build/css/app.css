@@ -674,3 +674,70 @@ img {
 .btn-cerrar:hover {
   cursor: pointer;
 }
+
+.precios {
+  padding: 5rem 0;
+}
+.precios h3 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .precios .contenedor-precios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.pase {
+  margin: 3rem 0;
+}
+.pase-header, .pase-footer {
+  padding: 0.5rem;
+}
+.pase-header p, .pase-footer p {
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+}
+.pase-header {
+  background-color: #ffd369;
+}
+.pase-header p {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.pase-body {
+  background-color: #ffffff;
+}
+.pase-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pase-body ul li {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid #393e46;
+}
+.pase-footer {
+  background-color: #ffd369;
+}
+.pase-footer p {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.site-footer {
+  background-color: #ffd369;
+  padding: 2rem;
+}
+.site-footer p {
+  margin: 0;
+  text-align: center;
+  color: #222831;
+  font-weight: 700;
+}

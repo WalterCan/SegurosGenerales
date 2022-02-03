@@ -1,0 +1,54 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.precios {
+	padding: 5rem 0;
+	h3 {
+		text-align: center;
+		color: v.$blanco;
+		margin-bottom: 2rem;
+	}
+	.contenedor-precios {
+		@include m.tablet {
+			@include m.grid(2, 5rem);
+		}
+	}
+}
+.pase {
+	margin: 3rem 0;
+	&-header,
+	&-footer {
+		padding: 0.5rem;
+		p {
+			text-align: center;
+			color: v.$blanco;
+			margin: 0;
+			font-weight: 700;
+		}
+	}
+	&-header {
+		background-color: v.$amarillo;
+		p {
+			text-transform: uppercase;
+			font-size: 1.6rem;
+		}
+	}
+	&-body {
+		background-color: v.$blanco;
+		ul {
+			@include m.resetear-lista;
+			li {
+				background-color: v.$blanco;
+				padding: 1rem;
+				border-bottom: 1px solid v.$grisOscuro;
+			}
+		}
+	}
+	&-footer {
+		background-color: v.$amarillo;
+		p {
+			font-size: 2.4rem;
+			font-weight: 700;
+		}
+	}
+}

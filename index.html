@@ -19,9 +19,9 @@
 			<div class="contenedor contenido-header">
 				<h1><a href="/index.html">Seguros Generales K.C.</a></h1>
 				<nav class="navegacion-principal">
-					<a href="#">Inicio</a>
-					<a href="#">Servicios</a>
-					<a href="#">Galería</a>
+					<a href="#inicio">Servicios</a>
+					<a href="#galeria">Galeria</a>
+					<a href="#precios">Precios</a>
 				</nav>
 			</div>
 		</header>
@@ -54,7 +54,7 @@
 		</section>
 		<!-- Finaliza Sobre Seguros -->
 		<!-- LineUP -->
-		<section class="lineUp">
+		<section id="inicio" class="lineUp">
 			<h3 class="titulo-servicios">Servicios</h3>
 			<div class="servicios-contenedor contenedor">
 				<div class="servicios icono-moto bg-gris">
@@ -102,11 +102,58 @@
 		</section>
 		<!-- Fin LineUp -->
 		<!-- comienza galeria -->
-		<section class="galeria contenedor">
+		<section id="galeria" class="galeria contenedor">
 			<h3>Galería</h3>
 			<ul class="galeria-imagenes"></ul>
 		</section>
 		<!-- Finaliza Galeria -->
 		<script src="/build/js/app.js"></script>
+
+		<!-- Seccion Precios -->
+		<section id="precios" class="bg-gris precios">
+			<h3>Precios</h3>
+			<div class="contenedor contenedor-precios">
+				<div class="basico pase">
+					<header class="pase-header">
+						<p>Básico</p>
+					</header>
+					<div class="pase-body">
+						<ul>
+							<li>Asistencia Mecánica</li>
+							<li>Resp.Civil</li>
+							<li>Granizo</li>
+						</ul>
+					</div>
+
+					<footer class="pase-footer">
+						<p>$1500</p>
+					</footer>
+				</div>
+				<div class="Todo-Riesgo pase">
+					<header class="pase-header">
+						<p>Todo Riesgo</p>
+					</header>
+					<div class="pase-body">
+						<ul>
+							<li>Asistencia Mecánica</li>
+							<li>Resp.Civil</li>
+							<li>Granizo</li>
+							<li>Robo</li>
+							<li>Incendio</li>
+							<li>Daños p/Accidente</li>
+						</ul>
+					</div>
+					<footer class="pase-footer">
+						<p>$2500</p>
+					</footer>
+				</div>
+			</div>
+		</section>
+		<!-- cerrando Precios -->
+		<!-- Abiendo Footer -->
+		<footer class="site-footer">
+			<p>Seguros Generales. Todos los Derechos Reservados, Cantero Walter</p>
+		</footer>
+		<!-- Cerrando Footer -->
 	</body>
 </html>
